@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Cliente</title>
+</head>
+<body>
+    <h1>Consultar Cliente</h1>
+    <form th:action="@{/clientes/consultar}" method="post">
+        <label for="termo">ID ou Nome:</label>
+        <input type="text" id="termo" name="termo" required />
+        <button type="submit">Buscar</button>
+    </form>
+    <a href="/clientes">← Voltar</a>
+</body>
+</html>

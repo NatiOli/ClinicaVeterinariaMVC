@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nova Consulta</title>
+</head>
+<body>
+    <h1>Nova Consulta</h1>
+    <form th:action="@{/consultas/salvar}" method="post">
+        <label for="petId">ID do Pet:</label>
+        <input type="text" id="petId" name="petId" /><br/>
+
+        <label for="medicoId">ID do Médico:</label>
+        <input type="text" id="medicoId" name="medicoId" /><br/>
+
+        <label for="data">Data (yyyy-MM-ddTHH:mm:ss):</label>
+        <input type="text" id="data" name="data" placeholder="2025-06-28T14:30:00" /><br/>
+
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

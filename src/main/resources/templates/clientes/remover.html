@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Remover Cliente</title>
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="container mt-4">
+
+    <h1>Remover Cliente</h1>
+
+    <p class="fs-5">
+        Deseja realmente remover o cliente <strong th:text="${cliente.nome}">Nome</strong>?
+    </p>
+
+    <form th:action="@{/clientes/remover}" method="post" class="d-inline">
+        <input type="hidden" name="id" th:value="${cliente.id}" />
+        <button type="submit" class="btn btn-danger">Sim, remover</button>
+    </form>
+
+    <a href="/clientes" class="btn btn-secondary ms-2">Cancelar</a>
+
+</body>
+</html>
